@@ -5,52 +5,43 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// a class representing the Angry Chicken entree
+    /// class for the pulled pork entree
     /// </summary>
-    public class AngryChicken
+    public class PecosPulledPork
     {
-        private bool bread = true;
         /// <summary>
-        /// If chicken is has bread
-        /// </summary>
-        public bool Bread
-        {
-            get { return bread; }
-            set { bread = value; }
-        }
-        private bool pickle = true;
-        ///<summary>
-        /// If the chicken has pickle
-        /// </summary>
-        public bool Pickle
-        {
-            get { return pickle; }
-            set { pickle = value; }
-        }
-
-        /// <summary>
-        /// the price of the entree
+        /// price of the pulled pork
         /// </summary>
         public double Price
         {
             get
             {
-                return 5.99;
+                return 5.88;
             }
         }
-        /// <summary>
-        /// the Calories of the chicken
-        /// </summary>
 
+        /// <summary>
+        /// calories of the pulled pork
+        /// </summary>
         public uint Calories
         {
             get
             {
-                return 190;
+                return 528;
             }
         }
         /// <summary>
-        /// list of instructions for the preperation of the chicken
+        /// if bread is on the pulled pork
+        /// </summary>
+        public bool Bread { get; set; } = true;
+
+        /// <summary>
+        /// if pickles is on the pulled pork
+        /// </summary>
+        public bool Pickle { get; set; } = true;
+
+        /// <summary>
+        /// list of instructions for the preperation of the pulled pork
         /// </summary>
         public List<string> SpecialInstructions
         {
@@ -60,7 +51,6 @@ namespace CowboyCafe.Data
 
                 if (!Bread) instructions.Add("hold bread");
                 if (!Pickle) instructions.Add("hold pickle");
-               
 
                 return instructions;
             }
