@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class AngeryChicken
+    public class AngryChicken
     {
         private bool bread = true;
         /// <summary>
