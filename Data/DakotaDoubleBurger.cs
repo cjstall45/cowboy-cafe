@@ -1,10 +1,18 @@
-﻿using System;
+﻿/*
+* Author: Charlie Stallbaumer
+* Class name:DakotaDoubleBurger
+* Purposes: to create a class for the Dakota Double Burger
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class DakotaDoubleBurger
+    /// <summary>
+    /// a class for the Dakota Double Burger
+    /// </summary>
+    public class DakotaDoubleBurger : Entree
     {
         /// <summary>
         /// if buns are on the burger
@@ -42,7 +50,7 @@ namespace CowboyCafe.Data
         /// price of the dakota double
         /// </summary>
        
-        public double Price
+        public override double Price
         {
             get
             {
@@ -52,7 +60,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// calories of the dakota double
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -63,7 +71,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// instructions to make the Dakota Double
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

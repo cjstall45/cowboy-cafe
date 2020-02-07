@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Charlie Stallbaumer
+* Class name: PecosPulledPork
+* Purposes: to create a class for the pulled pork entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,12 +12,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// class for the pulled pork entree
     /// </summary>
-    public class PecosPulledPork
+    public class PecosPulledPork : Entree
     {
         /// <summary>
         /// price of the pulled pork
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +28,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// calories of the pulled pork
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -43,7 +48,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// list of instructions for the preperation of the pulled pork
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

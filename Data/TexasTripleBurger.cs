@@ -1,10 +1,18 @@
-﻿using System;
+﻿/*
+* Author: Charlie Stallbaumer
+* Class name:TexasTripleBurger
+* Purposes: to create a class for the texas triple burger entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class TexasTripleBurger
+    /// <summary>
+    /// a class for the texas triple burger entree
+    /// </summary>
+    public class TexasTripleBurger : Entree
     {
         /// <summary>
         /// if buns are on the burger
@@ -49,7 +57,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// price of the texas triple
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -59,7 +67,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// calories of the texas triple
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -69,7 +77,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// instructions for how to make the Texas Triple
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
