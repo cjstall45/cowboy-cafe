@@ -36,7 +36,7 @@ namespace CowboyCafe.Data
                 List<string> instructions = new List<string>();
 
                 if (!Ice)
-                    instructions.Add("hold ice");
+                    instructions.Add("Hold Ice");
                 if (Lemon)
                     instructions.Add("Add Lemon");
                 return instructions;

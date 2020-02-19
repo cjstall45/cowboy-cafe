@@ -78,7 +78,7 @@ namespace CowboyCafe.Data
                 List<string> instructions = new List<string>();
 
                 if (Ice)
-                    instructions.Add("Add ice");
+                    instructions.Add("Add Ice");
                 if (RoomForCream)
                     instructions.Add("Room for Cream");
                 if (Decaf)
@@ -87,6 +87,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        
     }
 
 }

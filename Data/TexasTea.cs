@@ -82,9 +82,9 @@ namespace CowboyCafe.Data
                 List<string> instructions = new List<string>();
 
                 if (!Ice)
-                    instructions.Add("hold ice");
+                    instructions.Add("Hold Ice");
                 if (Lemon)
-                    instructions.Add("add lemon");
+                    instructions.Add("Add Lemon");
                 if (!Sweet)
                     instructions.Add("no sweetener");
 
