@@ -70,5 +70,13 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// a overrideing of the tostring method
+        /// </summary>
+        /// <returns>the type of the object as a string</returns>
+        public override string ToString()
+        {
+            return "Angry Chicken";
+        }
     }
 }

@@ -34,5 +34,14 @@ namespace CowboyCafe.Data
                 return 894;
             }
         }
+
+        /// <summary>
+        /// a overrideing of the tostring method
+        /// </summary>
+        /// <returns>the type of the object as a string</returns>
+        public override string ToString()
+        {
+            return "Rustlers Ribs";
+        }
     }
 }

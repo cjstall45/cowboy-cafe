@@ -74,5 +74,59 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// an override of the defalt to string method
+        /// </summary>
+        /// <returns>a string with the size, flavor, and object type</returns>
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Small:
+                    switch (Flavor)
+                    {
+                        case SodaFlavor.BirchBeer:
+                            return "Small Birch Beer Jerked Soda";
+                        case SodaFlavor.CreamSoda:
+                            return "Small Cream Soda Jerked Soda";
+                        case SodaFlavor.OrangeSoda:
+                            return "Small Orange Soda Jerked Soda";
+                        case SodaFlavor.RootBeer:
+                            return "Small Root Beer Jerked Soda";
+                        default:
+                            return "Small Sarsparilla Jerked Soda";
+                    }
+                case Size.Medium:
+                    switch (Flavor)
+                    {
+                        case SodaFlavor.BirchBeer:
+                            return "Medium Birch Beer Jerked Soda";
+                        case SodaFlavor.CreamSoda:
+                            return "Medium Cream Soda Jerked Soda";
+                        case SodaFlavor.OrangeSoda:
+                            return "Medium Orange Soda Jerked Soda";
+                        case SodaFlavor.RootBeer:
+                            return "Medium Root Beer Jerked Soda";
+                        default:
+                            return "Medium Sarsparilla Jerked Soda";
+                    }
+                case Size.Large:
+                    switch (Flavor)
+                    {
+                        case SodaFlavor.BirchBeer:
+                            return "Large Birch Beer Jerked Soda";
+                        case SodaFlavor.CreamSoda:
+                            return "Large Cream Soda Jerked Soda";
+                        case SodaFlavor.OrangeSoda:
+                            return "Large Orange Soda Jerked Soda";
+                        case SodaFlavor.RootBeer:
+                            return "Large Root Beer Jerked Soda";
+                        default:
+                            return "Large Sarsparilla Jerked Soda";
+                    }
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }

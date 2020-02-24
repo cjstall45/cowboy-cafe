@@ -86,9 +86,28 @@ namespace CowboyCafe.Data
                 if (Lemon)
                     instructions.Add("Add Lemon");
                 if (!Sweet)
-                    instructions.Add("no sweetener");
+                    instructions.Add("No Sweetener");
 
                 return instructions;
+            }
+        }
+
+        /// <summary>
+        /// an override of the defalt to string method
+        /// </summary>
+        /// <returns>a string with the size and object type</returns>
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Small:
+                    return "Small Texas Tea";
+                case Size.Medium:
+                    return "Medium Texas Tea";
+                case Size.Large:
+                    return "Large Texas Tea";
+                default:
+                    throw new NotImplementedException();
             }
         }
     }

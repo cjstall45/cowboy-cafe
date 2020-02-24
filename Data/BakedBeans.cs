@@ -54,5 +54,24 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// an override of the defalt to string method
+        /// </summary>
+        /// <returns>a string with the size and object type</returns>
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Small:
+                    return "Small Baked Beans";
+                case Size.Medium:
+                    return "Medium Baked Beans";
+                case Size.Large:
+                    return "Large Baked Beans";
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }
