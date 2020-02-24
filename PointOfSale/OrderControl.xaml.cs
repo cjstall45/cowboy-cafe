@@ -45,72 +45,72 @@ namespace PointOfSale
             OrderListView.Items.Add(new CowpokeChili());
         }
 
-        private void AddRustlersRibsButton_Click(object sender, RoutedEventArgs e)
+        void AddRustlersRibsButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new RustlersRibs());
         }
 
-        private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
+        void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new PecosPulledPork());
         }
 
-        private void AddTrailburgerButton_Click(object sender, RoutedEventArgs e)
+        void AddTrailburgerButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new TrailBurger());
         }
 
-        private void AddDakotaDoubleButton_Click(object sender, RoutedEventArgs e)
+        void AddDakotaDoubleButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new DakotaDoubleBurger());
         }
 
-        private void AddTexasTripleButton_Click(object sender, RoutedEventArgs e)
+        void AddTexasTripleButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new TexasTripleBurger());
         }
 
-        private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
+        void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new AngryChicken());
         }
 
-        private void AddChiliCheeseFriesButton_Click(object sender, RoutedEventArgs e)
+        void AddChiliCheeseFriesButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new ChiliCheeseFries());
         }
 
-        private void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
+        void AddCornDodgersButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CornDodgers());
         }
 
-        private void AddPanDeCampoButton_Click(object sender, RoutedEventArgs e)
+        void AddPanDeCampoButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new PanDeCampo());
         }
 
-        private void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
+        void AddBakedBeansButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new BakedBeans());
         }
 
-        private void AddJerkedSodaButton_Click(object sender, RoutedEventArgs e)
+        void AddJerkedSodaButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new JerkedSoda());
         }
 
-        private void AddTexasTeaButton_Click(object sender, RoutedEventArgs e)
+        void AddTexasTeaButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new TexasTea());
         }
 
-        private void AddCowboyCoffeeButton_Click(object sender, RoutedEventArgs e)
+        void AddCowboyCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CowboyCoffee());
         }
 
-        private void AddWaterButton_Click(object sender, RoutedEventArgs e)
+        void AddWaterButton_Click(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new Water());
         }
