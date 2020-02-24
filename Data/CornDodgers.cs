@@ -64,9 +64,9 @@ namespace CowboyCafe.Data
             switch (Size)
             {
                 case Size.Small:
-                    return "Small Corn Dogers";
+                    return "Small Corn Dodgers";
                 case Size.Medium:
-                    return "Medium Corn Dogers";
+                    return "Medium Corn Dodgers";
                 case Size.Large:
                     return "Large Corn Dodgers";
                 default:
