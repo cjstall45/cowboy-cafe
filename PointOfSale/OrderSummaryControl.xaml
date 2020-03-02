@@ -13,7 +13,11 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel>
-            <TextBlock Text="{Binding Path=OrderNumber, StringFormat= Order }" Background="White" Height="25"/>
+            <TextBlock Text="{Binding Path=OrderNumber, StringFormat= Order }" Background="White" Height="30" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -27,12 +31,17 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
                                 <TextBlock Text="{Binding}"></TextBlock>
+                                <ListBox ItemsSource="{Binding Path= SpecialInstructions}" Grid.Row="1"></ListBox>
                                 <TextBlock Text="{Binding Path=Price, StringFormat=c}" Grid.Column="1"></TextBlock>
-                                <ListBox ItemsSource="{Binding Path=SpecailInstructions}"/>
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
+                   
                 </ListBox>
 
             </Grid>
