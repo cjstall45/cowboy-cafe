@@ -38,8 +38,8 @@
             <Button Name="AddWaterButton" Height="50" >Water</Button>
         </StackPanel>
         <StackPanel Grid.Column="3">
-            <TextBlock Background="White" FontSize="16" TextAlignment="Center" Height="30">Order</TextBlock>
-            <ListView Name="OrderListView"/>
+            <local:OrderSummaryControl></local:OrderSummaryControl>
         </StackPanel>
+
     </Grid>
 </UserControl>

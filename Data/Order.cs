@@ -13,7 +13,7 @@ namespace CowboyCafe.Data
         private List<IOrderItem> items = new List<IOrderItem>();
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public IEnumerable<IOrderItem> Items { get { return items; } }
+        public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
 
         public double Subtotal 
         {

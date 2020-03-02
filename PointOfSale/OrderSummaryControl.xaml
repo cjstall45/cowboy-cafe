@@ -7,20 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200">
     <UserControl.Resources>
-        <Style TargetType="ListBoxItem">
+        <Style TargetType="ListBox">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
     </UserControl.Resources>
     <Grid>
         <StackPanel>
-            <TextBlock Text="{Binding Path=OrderNumber}" Background="White" Height="25"/>
+            <TextBlock Text="{Binding Path=OrderNumber, StringFormat= Order }" Background="White" Height="25"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ListView Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,50,0" />
-                <ListView Name="OrderPriceListView" Grid.Column="1" Margin="50,0,0,0"/>
+                <ListBox Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding Path= Items}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding}"></TextBlock>
+                                <TextBlock Text="{Binding Path=Price, StringFormat=c}" Grid.Column="1"></TextBlock>
+                                <ListBox ItemsSource="{Binding Path=SpecailInstructions}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
