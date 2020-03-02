@@ -40,64 +40,109 @@ namespace PointOfSale
 
         void OnAddCowpokeChiliButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new CowpokeChili());
+            if(DataContext is Order data)
+            {
+                data.Add(new CowpokeChili());
+            }
         }
 
         void OnAddAngryChickenButtonClick(object sender, RoutedEventArgs e)
         {
-           // OrderListView.Items.Add(new AngryChicken());
+            if (DataContext is Order data)
+            {
+                data.Add(new AngryChicken());
+            }
         }
         void OnAddBakedBeansButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new BakedBeans());
+            if (DataContext is Order data)
+            {
+                data.Add(new BakedBeans());
+            }
         }
         void OnAddChiliCheeseFriesButtonClick(object sender, RoutedEventArgs e)
         {
-         //   OrderListView.Items.Add(new ChiliCheeseFries());
+            if (DataContext is Order data)
+            {
+                data.Add(new ChiliCheeseFries());
+            }
         }
         void OnAddCornDodgersButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new CornDodgers());
+            if (DataContext is Order data)
+            {
+                data.Add(new CornDodgers());
+            }
         }
         void OnAddCowboyCoffeeButtonClick(object sender, RoutedEventArgs e)
         {
-          // OrderListView.Items.Add(new CowboyCoffee());
+            if (DataContext is Order data)
+            {
+                data.Add(new CowboyCoffee());
+            }
         }
         void OnAddDakotaDoubleBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new DakotaDoubleBurger());
+            if (DataContext is Order data)
+            {
+                data.Add(new DakotaDoubleBurger());
+            }
         }
         void OnAddJerkedSodaButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new JerkedSoda());
+            if (DataContext is Order data)
+            {
+                data.Add(new JerkedSoda());
+            }
         }
         void OnAddPanDeCampoButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new PanDeCampo());
+            if (DataContext is Order data)
+            {
+                data.Add(new PanDeCampo());
+            }
         }
         void OnAddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new PecosPulledPork());
+            if (DataContext is Order data)
+            {
+                data.Add(new PecosPulledPork());
+            }
         }
         void OnAddRustlerRibsButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new RustlersRibs());
+            if (DataContext is Order data)
+            {
+                data.Add(new RustlersRibs());
+            }
         }
         void OnAddTexasTeaButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new TexasTea());
+            if (DataContext is Order data)
+            {
+                data.Add(new TexasTea());
+            }
         }
         void OnAddTexasTripleBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new TexasTripleBurger());
+            if (DataContext is Order data)
+            {
+                data.Add(new TexasTripleBurger());
+            }
         }
         void OnAddTrailBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-         //   OrderListView.Items.Add(new TrailBurger());
+            if (DataContext is Order data)
+            {
+                data.Add(new TrailBurger());
+            }
         }
         void OnAddWaterButtonClick(object sender, RoutedEventArgs e)
         {
-          //  OrderListView.Items.Add(new Water());
+            if (DataContext is Order data)
+            {
+                data.Add(new Water());
+            }
         }
     }
 }

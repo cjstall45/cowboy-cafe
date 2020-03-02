@@ -19,7 +19,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ListView Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,50,0"/>
+                <ListView Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,50,0" />
                 <ListView Name="OrderPriceListView" Grid.Column="1" Margin="50,0,0,0"/>
             </Grid>
             <Grid>
