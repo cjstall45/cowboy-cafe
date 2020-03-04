@@ -21,7 +21,7 @@
                         <TextBlock.TextDecorations>
                             <TextDecoration/>
                         </TextBlock.TextDecorations> Entrees</TextBlock>
-                    <Button Name="AddCowpokeChiliButton" Height="50">Cowpoke Chilli</Button>
+                    <Button Name="AddCowpokeChiliButton" Height="50" Tag="CowpokeChili">Cowpoke Chilli</Button>
                     <Button Name="AddRustlersRibsButton" Height="50">RustlersRib's</Button>
                     <Button Name="AddPecosPulledPorkButton" Height="50">Pecos Pulled Pork</Button>
                     <Button Name="AddTrailburgerButton" Height="50">Trail Burger</Button>

@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CowboyCafe.Extensions;
+
 namespace PointOfSale
 {
     /// <summary>
@@ -18,10 +20,12 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        private OrderControl orderControl;
         public MenuItemSelectionControl()
         {
             InitializeComponent();
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClick;
+            AddCowpokeChiliButton.Click += OnItemButtonClicked;
             AddAngryChickenButton.Click += OnAddAngryChickenButtonClick;
             AddBakedBeansButton.Click += OnAddBakedBeansButtonClick;
             AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClick;
@@ -36,6 +40,24 @@ namespace PointOfSale
             AddTexasTripleButton.Click += OnAddTexasTripleBurgerButtonClick;
             AddTrailburgerButton.Click += OnAddTrailBurgerButtonClick;
             AddWaterButton.Click += OnAddWaterButtonClick;
+            
+        }
+
+        public void OnItemButtonClicked(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                if (sender is Button button)
+                {
+                    switch (button.Tag)
+                    {
+                        case "CowpokeChili":
+                            orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            break;
+                    }
+                }
+            }
         }
         /// <summary>
         /// event handler for Cowpoke chili button
@@ -46,9 +68,7 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                var cc = new CowpokeChili();
-                cc.Cheese = false;
-                data.Add(cc);
+                data.Add(new CowpokeChili());
             }
         }
         /// <summary>

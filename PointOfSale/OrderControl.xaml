@@ -26,13 +26,13 @@
                     <ColumnDefinition Width="267*"/>
                     <ColumnDefinition Width="133*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0"  >
-                    <local:MenuItemSelectionControl Width="532"></local:MenuItemSelectionControl>
-                </StackPanel>
+                
                 <StackPanel Grid.Column="1">
                     <local:OrderSummaryControl Width="265"></local:OrderSummaryControl>
                 </StackPanel>
-
+                <Border x:Name="Container" Grid.Column="0">
+                    <local:MenuItemSelectionControl/>
+                </Border>
             </Grid>
 
         </StackPanel>

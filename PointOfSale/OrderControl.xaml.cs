@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
 
+
 namespace PointOfSale
 {
     /// <summary>
@@ -27,6 +28,10 @@ namespace PointOfSale
             CancelOrderButton.Click += OnCancelOrderButtonClick;
             CompleteOrderButton.Click += OnCompleteOrderButtonClick;
 
+        }
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
         }
         /// <summary>
         /// event handler for Cancel order button
