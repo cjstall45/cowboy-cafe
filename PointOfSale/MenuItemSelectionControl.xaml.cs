@@ -24,7 +24,7 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
-            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClick;
+           // AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClick;
             AddCowpokeChiliButton.Click += OnItemButtonClicked;
             AddAngryChickenButton.Click += OnAddAngryChickenButtonClick;
             AddBakedBeansButton.Click += OnAddBakedBeansButtonClick;
@@ -53,7 +53,11 @@ namespace PointOfSale
                     switch (button.Tag)
                     {
                         case "CowpokeChili":
-                            orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            var entree = new CowpokeChili();
+                            var screen = new CustomizeCowpokeChili();
+                            screen.DataContext = entree;
+                            order.Add(entree);
+                            orderControl.SwapScreen(screen);
                             break;
                     }
                 }
