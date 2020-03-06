@@ -42,7 +42,22 @@ namespace PointOfSale
             AddWaterButton.Click += OnAddWaterButtonClick;
             
         }
+        void AddItemAndOpenCustomizationScreen(IOrderItem item, FrameworkElement screen)
+        {
+            var order = DataContext as Order;
+            if (order == null) throw new Exception("Data Context expected to be an Order.");
 
+            if(screen == null)
+            {
+                var orderControl = this.FindAncestor<OrderControl>();
+                if (orderControl == null) throw new Exception("An ansestor of OrderControl failed to be found");
+
+                screen.DataContext = item;
+                orderControl.SwapScreen(screen);
+            }
+
+            order.Add(item);
+        }
         public void OnItemButtonClicked(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<OrderControl>();
