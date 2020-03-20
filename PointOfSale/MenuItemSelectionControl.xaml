@@ -23,31 +23,31 @@
                         </TextBlock.TextDecorations> Entrees</TextBlock>
                     <Button Name="AddCowpokeChiliButton" Height="50" Tag="CowpokeChili">Cowpoke Chilli</Button>
                     <Button Name="AddRustlersRibsButton" Height="50">RustlersRib's</Button>
-                    <Button Name="AddPecosPulledPorkButton" Height="50">Pecos Pulled Pork</Button>
-                    <Button Name="AddTrailburgerButton" Height="50">Trail Burger</Button>
-                    <Button Name="AddDakotaDoubleButton" Height="50">Dakota Double Burger</Button>
-                    <Button Name="AddTexasTripleButton" Height="50">Texas Triple Burger</Button>
-                    <Button Name="AddAngryChickenButton" Height="50">Angry Chicken</Button>
+                    <Button Name="AddPecosPulledPorkButton" Height="50" Tag="PecosPulledPork">Pecos Pulled Pork</Button>
+                    <Button Name="AddTrailburgerButton" Height="50" Tag="Trailburger">Trail Burger</Button>
+                    <Button Name="AddDakotaDoubleButton" Height="50" Tag="DakotaDouble">Dakota Double Burger</Button>
+                    <Button Name="AddTexasTripleButton" Height="50" Tag="TexasTriple">Texas Triple Burger</Button>
+                    <Button Name="AddAngryChickenButton" Height="50" Tag="AngryChicken">Angry Chicken</Button>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <TextBlock Background="White" FontSize="16" TextAlignment="Center" Height="30" FontWeight="Bold">
                         <TextBlock.TextDecorations>
                             <TextDecoration/>
                         </TextBlock.TextDecorations> Sides</TextBlock>
-                    <Button Name="AddChiliCheeseFriesButton" Height="50" >Chili Cheese Fries</Button>
-                    <Button Name="AddCornDodgersButton" Height="50" >Corn Dodgers</Button>
-                    <Button Name="AddPanDeCampoButton" Height="50" >Pan de Campo</Button>
-                    <Button Name="AddBakedBeansButton" Height="50" >Baked Beans</Button>
+                    <Button Name="AddChiliCheeseFriesButton" Height="50" Tag="ChiliCheeseFries">Chili Cheese Fries</Button>
+                    <Button Name="AddCornDodgersButton" Height="50" Tag="CornDodgers">Corn Dodgers</Button>
+                    <Button Name="AddPanDeCampoButton" Height="50" Tag="PanDeCampo">Pan de Campo</Button>
+                    <Button Name="AddBakedBeansButton" Height="50" Tag="BakedBeans">Baked Beans</Button>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <TextBlock Background="White" FontSize="16" TextAlignment="Center" Height="30" FontWeight="Bold">
                         <TextBlock.TextDecorations>
                             <TextDecoration/>
                         </TextBlock.TextDecorations>Drinks</TextBlock>
-                    <Button Name="AddJerkedSodaButton" Height="50" >Jerked Soda</Button>
-                    <Button Name="AddTexasTeaButton" Height="50" >Texas Tea</Button>
-                    <Button Name="AddCowboyCoffeeButton" Height="50" >Cowboy Coffee</Button>
-                    <Button Name="AddWaterButton" Height="50" >Water</Button>
+                    <Button Name="AddJerkedSodaButton" Height="50" Tag="JerkedSoda">Jerked Soda</Button>
+                    <Button Name="AddTexasTeaButton" Height="50" Tag="TexasTea">Texas Tea</Button>
+                    <Button Name="AddCowboyCoffeeButton" Height="50" Tag="CowboyCoffee">Cowboy Coffee</Button>
+                    <Button Name="AddWaterButton" Height="50" Tag="Water">Water</Button>
                 </StackPanel>
             </Grid>
         </StackPanel>

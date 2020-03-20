@@ -35,15 +35,32 @@ namespace CowboyCafe.Data
                 return 528;
             }
         }
+        private bool bread = true;
         /// <summary>
-        /// if bread is on the pulled pork
+        /// If pulled Pork has bread
         /// </summary>
-        public bool Bread { get; set; } = true;
-
-        /// <summary>
-        /// if pickles is on the pulled pork
+        public bool Bread
+        {
+            get { return bread; }
+            set
+            {
+                bread = value;
+                NotifyOfPropertyChanged("Bread");
+            }
+        }
+        private bool pickle = true;
+        ///<summary>
+        /// If the pulled pork has pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                NotifyOfPropertyChanged("Pickle");
+            }
+        }
 
         /// <summary>
         /// list of instructions for the preperation of the pulled pork
@@ -54,8 +71,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Bread) instructions.Add("hold bread");
-                if (!Pickle) instructions.Add("hold pickle");
+                if (!bread) instructions.Add("hold bread");
+                if (!pickle) instructions.Add("hold pickle");
 
                 return instructions;
             }

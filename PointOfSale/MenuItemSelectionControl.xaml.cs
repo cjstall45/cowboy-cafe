@@ -24,21 +24,20 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
-           // AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClick;
             AddCowpokeChiliButton.Click += OnItemButtonClicked;
-            AddAngryChickenButton.Click += OnAddAngryChickenButtonClick;
+            AddAngryChickenButton.Click += OnItemButtonClicked;
             AddBakedBeansButton.Click += OnAddBakedBeansButtonClick;
             AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClick;
             AddCornDodgersButton.Click += OnAddCornDodgersButtonClick;
             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClick;
-            AddDakotaDoubleButton.Click += OnAddDakotaDoubleBurgerButtonClick;
+            AddDakotaDoubleButton.Click += OnItemButtonClicked;
             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClick;
             AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClick;
-            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClick;
+            AddPecosPulledPorkButton.Click += OnItemButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlerRibsButtonClick;
             AddTexasTeaButton.Click += OnAddTexasTeaButtonClick;
-            AddTexasTripleButton.Click += OnAddTexasTripleBurgerButtonClick;
-            AddTrailburgerButton.Click += OnAddTrailBurgerButtonClick;
+            AddTexasTripleButton.Click += OnItemButtonClicked;
+            AddTrailburgerButton.Click += OnItemButtonClicked;
             AddWaterButton.Click += OnAddWaterButtonClick;
             
         }
@@ -65,11 +64,47 @@ namespace PointOfSale
             {
                 if (sender is Button button)
                 {
+                   
                     switch (button.Tag)
                     {
                         case "CowpokeChili":
-                            var entree = new CowpokeChili();
-                            var screen = new CustomizeCowpokeChili();
+                            var chiliEntree = new CowpokeChili();
+                            var chiliScreen = new CustomizeCowpokeChili();
+                            chiliScreen.DataContext = chiliEntree;
+                            order.Add(chiliEntree);
+                            orderControl.SwapScreen(chiliScreen);
+                            break;
+                        case "PecosPulledPork":
+                            var porkEntree = new PecosPulledPork();
+                            var porkScreen = new CustomizePecosPulledPork();
+                            porkScreen.DataContext = porkEntree;
+                            order.Add(porkEntree);
+                            orderControl.SwapScreen(porkScreen);
+                            break;
+                        case "Trailburger":
+                            var trailentree = new TrailBurger();
+                            var trailscreen = new CustomizeTrailburger();
+                            trailscreen.DataContext = trailentree;
+                            order.Add(trailentree);
+                            orderControl.SwapScreen(trailscreen);
+                            break;
+                        case "DakotaDouble":
+                            var dakotaentree = new DakotaDoubleBurger();
+                            var dakotascreen = new CustomizeDakotaDouble();
+                            dakotascreen.DataContext = dakotaentree;
+                            order.Add(dakotaentree);
+                            orderControl.SwapScreen(dakotascreen);
+                            break;
+                        case "TexasTriple":
+                            var texasentree = new TexasTripleBurger();
+                            var texasscreen = new CustomizeTexasTriple();
+                            texasscreen.DataContext = texasentree;
+                            order.Add(texasentree);
+                            orderControl.SwapScreen(texasscreen);
+                            break;
+                        case "AngryChicken":
+                            var entree = new AngryChicken();
+                            var screen = new CustomizeAngryChicken();
                             screen.DataContext = entree;
                             order.Add(entree);
                             orderControl.SwapScreen(screen);

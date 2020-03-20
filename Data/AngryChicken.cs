@@ -21,7 +21,11 @@ namespace CowboyCafe.Data
         public bool Bread
         {
             get { return bread; }
-            set { bread = value; }
+            set 
+            { 
+                bread = value;
+                NotifyOfPropertyChanged("Bread");
+            }
         }
         private bool pickle = true;
         ///<summary>
@@ -30,7 +34,11 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set 
+            { 
+                pickle = value;
+                NotifyOfPropertyChanged("Pickle");
+            }
         }
 
         /// <summary>
@@ -63,8 +71,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Bread) instructions.Add("hold bread");
-                if (!Pickle) instructions.Add("hold pickle");
+                if (!bread) instructions.Add("hold bread");
+                if (!pickle) instructions.Add("hold pickle");
                
 
                 return instructions;

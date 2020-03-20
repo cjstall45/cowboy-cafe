@@ -23,7 +23,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ListBox Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding Path= Items}" >
+                <ListBox Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding Path= Items}" MaxHeight="330">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
