@@ -26,13 +26,13 @@ namespace PointOfSale
             InitializeComponent();
             AddCowpokeChiliButton.Click += OnItemButtonClicked;
             AddAngryChickenButton.Click += OnItemButtonClicked;
-            AddBakedBeansButton.Click += OnAddBakedBeansButtonClick;
-            AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClick;
-            AddCornDodgersButton.Click += OnAddCornDodgersButtonClick;
+            AddBakedBeansButton.Click += OnItemButtonClicked;
+            AddChiliCheeseFriesButton.Click += OnItemButtonClicked;
+            AddCornDodgersButton.Click += OnItemButtonClicked;
             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClick;
             AddDakotaDoubleButton.Click += OnItemButtonClicked;
             AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClick;
-            AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClick;
+            AddPanDeCampoButton.Click += OnItemButtonClicked;
             AddPecosPulledPorkButton.Click += OnItemButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlerRibsButtonClick;
             AddTexasTeaButton.Click += OnAddTexasTeaButtonClick;
@@ -108,6 +108,34 @@ namespace PointOfSale
                             screen.DataContext = entree;
                             order.Add(entree);
                             orderControl.SwapScreen(screen);
+                            break;
+                        case "ChiliCheeseFries":
+                            var chilientree = new ChiliCheeseFries();
+                            var chiliscreen = new CustomizeSide();
+                            chiliscreen.DataContext = chilientree;
+                            order.Add(chilientree);
+                            orderControl.SwapScreen(chiliscreen);
+                            break;
+                        case "CornDogers":
+                            var dogerentree = new CornDodgers();
+                            var dogerscreen = new CustomizeSide();
+                            dogerscreen.DataContext = dogerentree;
+                            order.Add(dogerentree);
+                            orderControl.SwapScreen(dogerscreen);
+                            break;
+                        case "PanDeCampo":
+                            var panentree = new PanDeCampo();
+                            var panscreen = new CustomizeSide();
+                            panscreen.DataContext = panentree;
+                            order.Add(panentree);
+                            orderControl.SwapScreen(panscreen);
+                            break;
+                        case "AddBakedBeansButton":
+                            var Beansentree = new BakedBeans();
+                            var Beansscreen = new CustomizeSide();
+                            Beansscreen.DataContext = Beansentree;
+                            order.Add(Beansentree);
+                            orderControl.SwapScreen(Beansscreen);
                             break;
                     }
                 }

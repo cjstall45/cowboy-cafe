@@ -13,7 +13,7 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel>
-            <TextBlock Text="{Binding Path=OrderNumber, StringFormat= Order }" Background="White" Height="30" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch">
+            <TextBlock Text="{Binding Path=OrderNumber, StringFormat=Order: {0} }" Background="White" Height="30" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch">
                 <TextBlock.TextDecorations>
                     <TextDecoration/>
                 </TextBlock.TextDecorations>
