@@ -21,7 +21,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return 1;
@@ -41,7 +41,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         if (Sweet)
@@ -63,14 +63,35 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        private bool sweet = true;
         /// <summary>
         /// a bool for if the tea is sweet or not
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet 
+        {
+            get { return sweet; }
+            set 
+            {
+                sweet = value;
+                NotifyOfPropertyChanged("Sweet");
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            } 
+        } 
+        private bool lemon = false;
         /// <summary>
-        /// a bool for if there is lemon
+        /// a bool for adding lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public virtual bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChanged("Lemon");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            }
+        }
         /// <summary>
         /// instructions for making the tea
         /// </summary>
@@ -100,7 +121,7 @@ namespace CowboyCafe.Data
         {
             if (Sweet)
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return "Small Texas Sweet Tea";
@@ -114,7 +135,7 @@ namespace CowboyCafe.Data
             }
             else
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return "Small Texas Plain Tea";

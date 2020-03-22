@@ -21,7 +21,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return 1.59;
@@ -41,7 +41,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return 110;
@@ -54,10 +54,17 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        private SodaFlavor flavor;
         /// <summary>
         /// the flavor of the soda
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public SodaFlavor Flavor { get { return flavor; }
+            set
+            {
+                flavor = value;
+                NotifyOfPropertyChanged("Flavor");
+            }
+        }
 
         /// <summary>
         /// instructions for making the soda
@@ -80,7 +87,7 @@ namespace CowboyCafe.Data
         /// <returns>a string with the size, flavor, and object type</returns>
         public override string ToString()
         {
-            switch (Size)
+            switch (DrinkSize)
             {
                 case Size.Small:
                     switch (Flavor)

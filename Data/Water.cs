@@ -22,10 +22,21 @@ namespace CowboyCafe.Data
         /// the calories of the water 
         /// </summary>
         public override uint Calories { get; } = 0;
+        
+        private bool lemon = false;
         /// <summary>
         /// a bool for adding lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public virtual bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                NotifyOfPropertyChanged("Lemon");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            }
+        }
         /// <summary>
         /// instructions for makeing water
         /// </summary>
@@ -48,7 +59,7 @@ namespace CowboyCafe.Data
         /// <returns>a string with the size and object type</returns>
         public override string ToString()
         {
-            switch (Size)
+            switch (DrinkSize)
             {
                 case Size.Small:
                     return "Small Water";

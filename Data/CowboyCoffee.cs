@@ -22,7 +22,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return 0.60;
@@ -42,7 +42,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return 3;
@@ -55,18 +55,46 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        private bool decaf = false;
         /// <summary>
         /// bool for decaf coffee
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        public bool Decaf { get { return decaf; }
+            set
+            {
+                decaf = value;
+                NotifyOfPropertyChanged("Decaf");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            }
+        }
+        private bool roomforcream = false;
         /// <summary>
         /// bool for if room should be left for cream
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream 
+        {
+            get { return roomforcream; }
+            set
+            {
+                roomforcream = value;
+                NotifyOfPropertyChanged("RoomForCream");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            }
+        }
+        private bool ice = false;
         /// <summary>
-        /// bool for the adding of ice
+        /// a bool for if the drink has ice
         /// </summary>
-        public override bool Ice { get; set; } = false;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChanged("Ice");
+                NotifyOfPropertyChanged("SpecialInstructions");
+            }
+        }
         /// <summary>
         /// instructions for making the coffee
         /// </summary>
@@ -91,7 +119,7 @@ namespace CowboyCafe.Data
         {
             if (Decaf)
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return "Small Decaf Cowboy Coffee";
@@ -105,7 +133,7 @@ namespace CowboyCafe.Data
             }
             else
             {
-                switch (Size)
+                switch (DrinkSize)
                 {
                     case Size.Small:
                         return "Small Cowboy Coffee";

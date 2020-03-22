@@ -29,16 +29,16 @@ namespace PointOfSale
             AddBakedBeansButton.Click += OnItemButtonClicked;
             AddChiliCheeseFriesButton.Click += OnItemButtonClicked;
             AddCornDodgersButton.Click += OnItemButtonClicked;
-            AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClick;
+            AddCowboyCoffeeButton.Click += OnItemButtonClicked;
             AddDakotaDoubleButton.Click += OnItemButtonClicked;
-            AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClick;
+            AddJerkedSodaButton.Click += OnItemButtonClicked;
             AddPanDeCampoButton.Click += OnItemButtonClicked;
             AddPecosPulledPorkButton.Click += OnItemButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlerRibsButtonClick;
-            AddTexasTeaButton.Click += OnAddTexasTeaButtonClick;
+            AddTexasTeaButton.Click += OnItemButtonClicked;
             AddTexasTripleButton.Click += OnItemButtonClicked;
             AddTrailburgerButton.Click += OnItemButtonClicked;
-            AddWaterButton.Click += OnAddWaterButtonClick;
+            AddWaterButton.Click += OnItemButtonClicked;
             
         }
         void AddItemAndOpenCustomizationScreen(IOrderItem item, FrameworkElement screen)
@@ -116,7 +116,7 @@ namespace PointOfSale
                             order.Add(chilientree);
                             orderControl.SwapScreen(chiliscreen);
                             break;
-                        case "CornDogers":
+                        case "CornDodgers":
                             var dogerentree = new CornDodgers();
                             var dogerscreen = new CustomizeSide();
                             dogerscreen.DataContext = dogerentree;
@@ -130,12 +130,40 @@ namespace PointOfSale
                             order.Add(panentree);
                             orderControl.SwapScreen(panscreen);
                             break;
-                        case "AddBakedBeansButton":
+                        case "BakedBeans":
                             var Beansentree = new BakedBeans();
                             var Beansscreen = new CustomizeSide();
                             Beansscreen.DataContext = Beansentree;
                             order.Add(Beansentree);
                             orderControl.SwapScreen(Beansscreen);
+                            break;
+                        case "JerkedSoda":
+                            var sodaentree = new JerkedSoda();
+                            var sodascreen = new CustomizeJerkedSoda();
+                            sodascreen.DataContext = sodaentree;
+                            order.Add(sodaentree);
+                            orderControl.SwapScreen(sodascreen);
+                            break;
+                        case "TexasTea":
+                            var teaentree = new TexasTea();
+                            var teascreen = new CustomizeTexasTea();
+                            teascreen.DataContext = teaentree;
+                            order.Add(teaentree);
+                            orderControl.SwapScreen(teascreen);
+                            break;
+                        case "CowboyCoffee":
+                            var coffeeentree = new CowboyCoffee();
+                            var coffeescreen = new CustomizeCowboyCoffee();
+                            coffeescreen.DataContext = coffeeentree;
+                            order.Add(coffeeentree);
+                            orderControl.SwapScreen(coffeescreen);
+                            break;
+                        case "Water":
+                            var waterentree = new Water();
+                            var waterscreen = new CustomizeWater();
+                            waterscreen.DataContext = waterentree;
+                            order.Add(waterentree);
+                            orderControl.SwapScreen(waterscreen);
                             break;
                     }
                 }
