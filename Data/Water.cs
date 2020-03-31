@@ -59,7 +59,7 @@ namespace CowboyCafe.Data
         /// <returns>a string with the size and object type</returns>
         public override string ToString()
         {
-            switch (DrinkSize)
+            switch (Size)
             {
                 case Size.Small:
                     return "Small Water";

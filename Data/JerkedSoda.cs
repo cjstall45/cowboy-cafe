@@ -21,7 +21,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return 1.59;
@@ -41,7 +41,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return 110;
@@ -87,7 +87,7 @@ namespace CowboyCafe.Data
         /// <returns>a string with the size, flavor, and object type</returns>
         public override string ToString()
         {
-            switch (DrinkSize)
+            switch (Size)
             {
                 case Size.Small:
                     switch (Flavor)

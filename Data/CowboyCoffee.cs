@@ -22,7 +22,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return 0.60;
@@ -42,7 +42,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return 3;
@@ -119,7 +119,7 @@ namespace CowboyCafe.Data
         {
             if (Decaf)
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return "Small Decaf Cowboy Coffee";
@@ -133,7 +133,7 @@ namespace CowboyCafe.Data
             }
             else
             {
-                switch (DrinkSize)
+                switch (Size)
                 {
                     case Size.Small:
                         return "Small Cowboy Coffee";

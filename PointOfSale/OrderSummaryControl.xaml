@@ -23,11 +23,12 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ListBox Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding Path= Items}" MaxHeight="330">
+                <ListBox Name="OrdersListView" Grid.Column="0" Grid.ColumnSpan="2"  ItemsSource="{Binding Path= Items}" MaxHeight="330" SelectionChanged="SwitchScreen">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
@@ -38,6 +39,7 @@
                                 <TextBlock Text="{Binding}"></TextBlock>
                                 <ListBox ItemsSource="{Binding Path= SpecialInstructions}" Grid.Row="1"></ListBox>
                                 <TextBlock Text="{Binding Path=Price, StringFormat=c}" Grid.Column="1"></TextBlock>
+                                <Button Click="RemoveItem" VerticalContentAlignment="Top" Width="20" Height="20" FontSize="14" Grid.Column="2" Background="Red">X</Button>
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
