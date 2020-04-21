@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="entrees">
+    <h2>
+        Entrees
+    </h2>
+    @foreach(CowboyCafe.Data.Entree e in CowboyCafe.Data.Menu.Entrees()) 
+    {
+        <p>@e.Price</p>
+    }
+    
+</div>
+<div class="sides">
+    <h2>
+        Sides
+    </h2>
+    @foreach (CowboyCafe.Data.Side e in CowboyCafe.Data.Menu.Sides()) 
+    {
+        @foreach(CowboyCafe.Data.Size size in Enum.GetValues(typeof(CowboyCafe.Data.Size)))
+        {
+            CowboyCafe.Data.Menu.SideSize(e, size);
+            <p>@e</p>
+            <p>@e.Price</p>
+            <p>@e.Calories</p>
+        }
+             
+    }
+    
+</div>
