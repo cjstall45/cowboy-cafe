@@ -41,7 +41,27 @@ namespace CowboyCafe.Data
             IEnumerable<IOrderItem> idrinks = drinks;
             return idrinks;
         }
-
+        public static IEnumerable<IOrderItem> CompleteMenu()
+        {
+            List<IOrderItem> items = new List<IOrderItem>();
+            items.Add(new AngryChicken());
+            items.Add(new CowpokeChili());
+            items.Add(new DakotaDoubleBurger());
+            items.Add(new PecosPulledPork());
+            items.Add(new RustlersRibs());
+            items.Add(new TexasTripleBurger());
+            items.Add(new TrailBurger());
+            items.Add(new BakedBeans());
+            items.Add(new ChiliCheeseFries());
+            items.Add(new CornDodgers());
+            items.Add(new PanDeCampo());
+            items.Add(new CowboyCoffee());
+            items.Add(new JerkedSoda());
+            items.Add(new TexasTea());
+            items.Add(new Water());
+            IEnumerable<IOrderItem> Iitems = items;
+            return Iitems;
+        }
         public static void SideSize(Side side, Size s)
         {
             side.Size = s;
