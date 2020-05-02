@@ -17,5 +17,7 @@ namespace CowboyCafe.Data
         /// the special instructions for the order item
         /// </summary>
         List<string> SpecialInstructions { get; }
+
+        uint Calories { get; }
     }
 }

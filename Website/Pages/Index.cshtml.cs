@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using CowboyCafe.Data;
 
 namespace Website.Pages
 {
@@ -17,9 +18,18 @@ namespace Website.Pages
             _logger = logger;
         }
 
+        public string SearchTerms { get; set; }
+
+        public string[] Catagories { get; set; }
+
+        public IEnumerable<IOrderItem> Items { get; protected set; }
+
+        
         public void OnGet()
         {
-
+            SearchTerms = Request.Query["SearchTerms"];
+            Catagories = Request.Query["Catagory"];
+            Items = Menu.Search(Menu.All, SearchTerms);
         }
     }
 }
