@@ -30,6 +30,7 @@ namespace Website.Pages
             SearchTerms = Request.Query["SearchTerms"];
             Catagories = Request.Query["Catagory"];
             Items = Menu.Search(Menu.All, SearchTerms);
+            Items = Menu.FilterByCatagory(Items, Catagories);
         }
     }
 }

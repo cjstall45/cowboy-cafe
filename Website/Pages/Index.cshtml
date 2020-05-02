@@ -11,10 +11,22 @@
 </div>
 <form>
     <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
-    <input type="submit" value="Search"/>
-    <input type="checkbox" name="Catagory" value="Entree"/>
-    <input type="checkbox" name="Catagory" value="Side"/>
-    <input type="checkbox" name="Catagory" value="Drink"/>
+    <input type="submit" value="Search" />
+    <div>
+        <h6>Catagory</h6>
+        @foreach (String catgory in CowboyCafe.Data.Menu.catagories)
+        {
+            <label>
+                <input type="checkbox" name="Catagory" value="@catgory" checked="@Model.Catagories.Contains(catgory)" />
+                @catgory
+            </label>
+        }
+    
+        <h6>Calorie Range</h6>
+        <input name="CalMin" type="number" min="0" max="1000" step="1" placeholder="min" />
+        to
+        <input name="CalMax" type="number" min="0" max="1000" step="1" placeholder="max" />
+    </div>
 </form>
 <h1>Results</h1>
 
@@ -45,10 +57,14 @@
                 </li>
             }
         }
-        <li>
-            <h3 class="title">@item</h3>
-            <div class="calories">Calories: @item.Calories</div>
-            <div class="price">Price: $@item.Price</div>
-        </li>
+        else
+        {
+            <li>
+                <h3 class="title">@item</h3>
+                <div class="calories">Calories: @item.Calories</div>
+                <div class="price">Price: $@item.Price</div>
+            </li>
+        }
+        
     }
 </ul>

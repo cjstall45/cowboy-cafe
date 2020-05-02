@@ -7,6 +7,15 @@ namespace CowboyCafe.Data
 {
     public static class Menu
     {
+        public static string[] catagories
+        {
+            get => new string[]
+            {
+                "Entree",
+                "Side",
+                "Drink"
+            };
+        }
         public static IEnumerable<IOrderItem> Entrees
         {
             get
@@ -97,6 +106,46 @@ namespace CowboyCafe.Data
                 if (item.ToString().Contains(term, StringComparison.InvariantCultureIgnoreCase))
                 {
                     results.Add(item);
+                }
+            }
+            return results;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByCatagory(IEnumerable<IOrderItem> items, string[] catagory)
+        {
+            List<IOrderItem> results = new List<IOrderItem>();
+
+            foreach(string c in catagory)
+            {
+                if (c.Contains("Entree"))
+                {
+                    foreach(IOrderItem item in items)
+                    {
+                        if(item is Entree)
+                        {
+                            results.Add(item);
+                        }
+                    }
+                }
+                if (c.Contains("Side"))
+                {
+                    foreach (IOrderItem item in items)
+                    {
+                        if (item is Side)
+                        {
+                            results.Add(item);
+                        }
+                    }
+                }
+                if (c.Contains("Drink"))
+                {
+                    foreach (IOrderItem item in items)
+                    {
+                        if (item is Drink)
+                        {
+                            results.Add(item);
+                        }
+                    }
                 }
             }
             return results;
